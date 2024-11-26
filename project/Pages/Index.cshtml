@@ -1,0 +1,97 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<link rel="stylesheet" href="~/css/style.css">
+
+<div class="container">
+    <!-- Main Content Area -->
+    <div class="content">
+        <header class="header">
+            <h1>Welcome to My Company</h1>
+            <p>
+                Our platform offers seamless management tools for your company’s human resources,
+                allowing you to add, update, view, and delete employee records effortlessly and securely.
+            </p>
+        </header>
+
+        <!-- About Us Section -->
+        <section class="about-us">
+            <h2>Know About Us</h2>
+            <div class="leadership">
+                <div class="leader">
+                    <img src="images/chariman.jpeg" alt="Chairman" />
+                    <h3>Chairman: Shree Ram Babu Prasad Yadav</h3>
+                    <p>
+                        Education prepares individuals for life beyond knowledge – it builds character and wisdom,
+                        shaping responsible citizens.
+                    </p>
+                </div>
+                <div class="leader">
+                    <img src="images/Director.jpeg" alt="Director" />
+                    <h3>Director: Mr. Amrendra Kumar</h3>
+                    <p>
+                        Education fosters mental skills and moral values. Our mission is to create successful,
+                        responsible students.
+                    </p>
+                </div>
+                <div class="leader">
+                    <img src="images/JS.jpeg" alt="Joint Secretary" />
+                    <h3>Joint Secretary: Mr. Dhirendra Kumar</h3>
+                    <p>
+                        We aim to instill character and wisdom, shaping students who excel and contribute to
+                        society.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Sidebar with Login/Sign-Up -->
+    <aside class="sidebar">
+        <div class="auth-section">
+            <h3>Sign In</h3>
+            <form method="post" asp-page-handler="Login">
+                <div class="form-group">
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="Email" required />
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="Password" required />
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+
+        <div class="auth-section">
+            <h3>Sign Up</h3>
+            <form method="post" asp-page-handler="SignUp">
+                <div class="form-group">
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="Email" required />
+                </div>
+                <div class="form-group">
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="Password" required />
+                </div>
+                <div class="form-group">
+                    <label for="signup-name">Name:</label>
+                    <input type="text" id="signup-name" name="Name" required />
+                </div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </aside>
+</div>
+<section class="gallery">
+    <h2>Our Work Environment</h2>
+    <div class="image-gallery">
+        <img src="images/office1.jpeg" alt="Office Environment" />
+        <img src="images/office2.jpeg" alt="Teamwork" />
+        <img src="images/office3.jpeg" alt="Collaboration" />
+        <img src="images/office4.jpeg" alt="Hard Work" />
+    </div>
+</section>
